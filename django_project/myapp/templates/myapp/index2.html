@@ -36,22 +36,22 @@
         <div class="line_in_cr_and_education">
        </div>
         <div class="left_and_right_panels">
-            <div class="left">
+            <form class="left">
                 <div class="student_or_worker">
                     <input type="radio" id="student" name="work" value="student">
                     <label for="student" class="variant"> Студент/выпускник  </label>
                     <input type="radio" id="work" name="work" value="worker"> 
                     <label for="work" class="variant">Сотрудник</label>
                 </div>
-                <form class="range-slider">
+                <div class="range-slider">
                     <label for="range" class="label-range">Курс</label>
                     <input class="slider" id="range" type="range" name="range" min="1" max="6" step="1" value="1" onchange="$('#sizevalue').text($('#range').val());" onclick='eventRange()'>
-                </form>
+                </div>
                 <div>
-                    <form>
+                    <div>
                         <input class="end_or_no" type="checkbox" name="end" id="end" onchange='perenosEnd()'> 
                         <label for="end" class="check">Уже закончил Вышку</label>
-                    </form>
+                    </div>
                 </div>
                 <div class="dropdown">
                     <p class="gray_text">Ступень образования</p>
@@ -84,10 +84,11 @@
                         <p class="v3">Инфокоммуникационные технологии и системы связи</p>
                     </div>
                 </div>
-                <form>
-                    <input class="data_windows_anketa" name="name" id="name" type="text" placeholder="Работа"  onchange='perenosWork(this.value)'> 
-                </form>
-            </div>
+                <div>
+                    <input class="data_windows_anketa" name="work" id="work" type="text" placeholder="Работа"  onchange='perenosWork(this.value)'> 
+                </div>
+                <input type="submit" value="Продолжить">
+            </form>
             <div class="right">
                 <p class="in_the_future_text">Так будет выглядеть твоя будущая страница</p>
                 <div class="future_anketa_big">
