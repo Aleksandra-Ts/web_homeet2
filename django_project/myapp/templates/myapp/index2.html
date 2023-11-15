@@ -19,7 +19,7 @@
 <body>
     <header class="top_panel">
         <div class="distances_top_panel">
-            <img class="logo" src="{% static 'img/logo.jpg'}" alt="logo">
+            <img class="logo" src="{% static 'img/logo.jpg' %}" alt="logo">
             <form>
                 <button class="white_button">Выйти из аккаута</button>
             </form>
@@ -36,12 +36,12 @@
         <div class="line_in_cr_and_education">
        </div>
         <div class="left_and_right_panels">
-            <form class="left">
+            <form class="left" id="formElem" method="post">
                 {% csrf_token %}
                 <div class="student_or_worker">
-                    <input type="radio" id="student" name="work" value="student">
+                    <input type="radio" id="student" name="st" value="student">
                     <label for="student" class="variant"> Студент/выпускник  </label>
-                    <input type="radio" id="work" name="work" value="worker"> 
+                    <input type="radio" id="work" name="st" value="worker"> 
                     <label for="work" class="variant">Сотрудник</label>
                 </div>
                 <div class="range-slider">
@@ -167,3 +167,4 @@
     </footer>
 </body>
 </html>
+
