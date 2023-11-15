@@ -137,3 +137,20 @@ function turn() {
         document.querySelector('#perenos_about').textContent = com.slice(0, 39) + '...';
     }
 }
+
+formElem.onsubmit = async (e) => {
+    e.preventDefault();
+
+    fetch('', {
+      method: 'POST',
+      body: new FormData(formElem)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        alert('Item saved successfully!');
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+};
