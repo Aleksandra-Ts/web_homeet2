@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    font-size: 16px;
+    font-family: "MuseoSansCyrl";
+}
+@font-face {
+    font-family: "MuseoSansCyrl";
+    src: url("myapp/static/fonts/MuseoSansCyrl300.otf") format("opentype");
+}
+.logo {
+    width: 90px;
+}
+.top_panel{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    display: flex;
+    height: 85px;
+}
+.distances_top_panel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+.white_button {
+    background: #ffff;
+    border: 1px solid #7953c3;
+    color: #7953c3;
+    width: 170px;
+    height: 25px;
+    align-items: center;
+    border-radius: 9px;
+}
+.creating_profile{
+    padding: 80px 180px;
+}
+.cr_text {
+    font-size: 35px;
+}
+.about_myself_text{
+    color: #ccc;
+    font-size: 14px;
+    line-height: 23px;
+}
+.cr_and_about_myself{
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+.line_in_cr_and_about_myself {
+    background-color: #939393cc;
+    height: 1.2px;
+    margin-top: 10px;
+}
+.violet_button{
+    background: #7953c3;
+    border: 1px solid #7953c3;
+    color: #ffff;
+    width: 160px;
+    height: 20px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.avatar {
+    text-align: center;
+}
+.dowload_form {
+   display: flex;
+   border: 1.5px dashed #cccc;
+   border-radius: 8px;
+   width: 305px;
+   height: 90px;
+   gap: 15px;
+   align-items: center;
+   flex-direction: column;
+   padding: 40px 40px;
+}
+.text_dowload_grey {
+    color: #cccc;
+    font-size: 14px;;
+}
+.anketa {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.example {
+    color: #939393cc;
+    width: 366px;
+}
+.data_windows_anketa{
+    background: #ebebebcc;
+    border: 0;
+    color: #000;
+    width: 366px;
+    padding: 15px 10px;
+    align-items: center;
+    border-radius: 5px; 
+}
+.date {
+    background: #ebebebcc;
+    border: 0;
+    color: #000;
+    width: 200px;
+    padding: 15px 10px;
+    align-items: center;
+    border-radius: 5px;
+}
+.about_myself_block {
+    background-color: #ebebebcc; 
+    border-radius: 5px; 
+    border: 0;
+    line-height: 18px; 
+    min-height: 128px; 
+    padding: 15px 10px; 
+    width: 366px; 
+    outline: none; 
+    resize:none; 
+}
+.services_and_networks {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;   
+}
+.services {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+.email_and_support {
+    align-items: center; 
+}
+.support {
+    color: #5d5b66;
+    margin-top: 5px;
+}
+.email {
+    color:#7953c3;
+    font-size: 30px;
+}
+.down {
+    margin-top: 40px;
+}
+.down_text {
+    margin-top: 40px;
+    color: #aaaa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 8px;
+}
+
+.networks_pict {
+    width: 50px;
+    height: 50px;
+}
+.left_and_right_panels{
+    display: flex; 
+    flex-direction: row; 
+    gap: 60px; 
+    width: 100%;
+    margin-top: 40px;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.future_anketa_big {
+    border-radius: 8px;
+    box-shadow: 0px 1.5px 4.5px 0px rgba(0, 0, 0, 0.5); 
+    display: flex;
+    padding: 25px 36px; 
+}
+.we_dont_know {
+    border-radius: 8px;
+    box-shadow: 0px 1.5px 4.5px 0px rgba(0, 0, 0, 0.5); 
+    padding: 25px 36px; 
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.bad_smile {
+    width: 35x;
+    height: 30px;
+}
+.place_for_photo {
+   display: flex;
+   border: 1.5px dashed #cccc;
+   border-radius: 18px;
+   width: 130px;
+   height: 140px;
+   gap: 15px;
+   align-items: center;
+   flex-direction: column;
+   margin-bottom: 10px;
+   align-items: center;
+}
+.place_for_photo_and_batton_show_contacts {
+    margin-top: 15px;
+}
+.name_surname_in_future_anketa {
+    font-size: 20px;
+}
+.gender_age_grey_block_in_future_anketa {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.small_grey_block_in_future {
+    background-color: #f1f1f1; 
+    border-radius: 7px; 
+    color: #ccc; 
+    width: 100px; 
+    height: 17px;
+}
+.medium_grey_block_in_future {
+    background-color: #f1f1f1; 
+    border-radius: 7px; 
+    color: #ccc; 
+    width: 110px; 
+    height: 20px;
+    margin-top: 5px;
+}
+.big_grey_block_in_future {
+    background-color: #f1f1f1; 
+    border-radius: 7px; 
+    color: #ccc; 
+    width: 400px; 
+    height: 100px;
+    margin-top: 10px;
+}
+
+.turn_about_myself_in_future {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 10px;
+}
+.turn {
+    background-color: #ffff;
+    border: 0px;
+    color:#7953c3;
+}
+.about_myself_in_future {
+    color:#5d5b66;
+}
+.future_anketa_right {
+    padding: 15px;
+}
+.show_contacts {
+    background-color: rgb(171,153,207);
+    border: 0px;
+    border-radius: 8px;
+    color: #ffff;
+    font-size: 10px;
+    padding: 5px 25px;
+    align-items: center;
+}
+.in_the_future_text{
+    color: #5d5b66;
+}
+.tell_about_yourself {
+    color:#5d5b66;
+}
+.continue_button_with_location {
+    display: flex;
+    margin-top: 350px;
+    align-items: center;
+    justify-content: space-between;
+}
+.for_continue_button {
+    display: flex;
+    justify-content: space-between;
+}
+.continue_button {
+    background-color: rgb(171,153,207);
+    border: 0px;
+    border-radius: 8px;
+    color: #ffff;
+    font-size: 17px;
+    padding: 5px 25px;
+    align-items: center;
+}
+.footer {
+    margin-top: 70px; 
+    padding: 60px 160px; 
+    border-top: 1px solid #5d5b66; 
+    border-bottom: 10px solid rgb(121,83,195); 
+}
+
+input[type="radio"] { 
+    display: none; 
+} 
+.variant:before { 
+    content: " "; 
+    color: rgb(121,83,195); 
+    display: inline-block; 
+    margin-right: 15px; 
+    position: relative; 
+    text-align: center; 
+    width: 20px; 
+    height: 20px; 
+    border: 2px solid rgb(121,83,195); 
+    vertical-align: middle; 
+    border-radius: 20px; 
+} 
+input:checked + .variant:before { 
+    content: '\2B24'; 
+}
+
+.variants {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#name_format {
+    font-size: 12px;
+    color: red;
+    visibility: hidden;
+}
+#tg_format {
+    font-size: 12px;
+    color: red;
+    visibility: hidden;
+}
+#tel_format {
+    font-size: 12px;
+    color: red;
+    visibility: hidden; 
+}
+
+.point {
+    height: 5px;
+    width: 5px;
+    background-color: #f1f1f1; 
+}
+
+#telegram {
+    visibility: hidden;
+}
+
+#number {
+    visibility: hidden;
+}

@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <style>
+        @font-face {
+            font-family: "MuseoSansCyrl"; 
+            src: url("{% static 'fonts/MuseoSansCyrl300.otf' %}") format("opentype"); 
+        }
+        * {
+            font-family: "MuseoSansCyrl";
+        }
+    </style>
+    <title>Образование</title>
+</head>
+<body>
+    <header class="top_panel">
+        <div class="distances_top_panel">
+            <img class="logo" src="{% static 'img/logo.jpg'}" alt="logo">
+            <form>
+                <button class="white_button">Выйти из аккаута</button>
+            </form>
+        </div>
+    </header>
+    <main class="creating_profile">
+        <form>
+            <a class="white_button" href="{% url 'index' %}">Назад</a>
+        </form>
+        <div class="cr_and_education">
+            <h1 class="cr_text">Создание профиля</h1>
+            <p class="education_text">/ Образование</p>
+        </div>
+        <div class="line_in_cr_and_education">
+       </div>
+        <div class="left_and_right_panels">
+            <div class="left">
+                <div class="student_or_worker">
+                    <input type="radio" id="student" name="work" value="student">
+                    <label for="student" class="variant"> Студент/выпускник  </label>
+                    <input type="radio" id="work" name="work" value="worker"> 
+                    <label for="work" class="variant">Сотрудник</label>
+                </div>
+                <form class="range-slider">
+                    <label for="range" class="label-range">Курс</label>
+                    <input class="slider" id="range" type="range" name="range" min="1" max="6" step="1" value="1" onchange="$('#sizevalue').text($('#range').val());" onclick='eventRange()'>
+                </form>
+                <div>
+                    <form>
+                        <input class="end_or_no" type="checkbox" name="end" id="end" onchange='perenosEnd()'> 
+                        <label for="end" class="check">Уже закончил Вышку</label>
+                    </form>
+                </div>
+                <div class="dropdown">
+                    <p class="gray_text">Ступень образования</p>
+                    <p onclick="stepEducation()" class="dropbtn" id="step">Ступень образования</p>
+                      <div id="myDropdown" class="dropdown-content">
+                        <p class="v1">Бакалавриат</p>
+                        <p class="v1">Магистратура</p>
+                        <p class="v1">Аспирантура</p>
+                      </div>
+                    </div>
+                <div class="dropdown2">
+                    <p class="gray_text">Факультет</p>
+                    <p onclick="faculty()" class="dropbtn2" id="fac">Факультет</p>
+                        <div id="myDropdown2" id="dropdown-content2" class="dropdown-content2">
+                            <p class="v2">Московский институт электроники и математики</p>
+                            <p class="v2">Высшая школа бизнеса</p>
+                            <p class="v2">Факультет компьютерных наук</p>
+                            <p class="v2">Факультет экономических наук</p>
+                            <p class="v2">Высшая школа дизайна</p>
+                        </div>
+                </div>
+                <div class="dropdown3">
+                    <p class="gray_text">Образовательная программа</p>
+                    <p onclick="program()" class="dropbtn3" id="step3">Образовательная программа</p>
+                      <div id="myDropdown3" id="dropdown-content3" class="dropdown-content3">
+                        <p class="v3">Информатика и вычислительная техника</p>
+                        <p class="v3">Информационная безопасность</p>
+                        <p class="v3">Компьютерная безопасность</p>
+                        <p class="v3">Прикладная математика</p>
+                        <p class="v3">Инфокоммуникационные технологии и системы связи</p>
+                    </div>
+                </div>
+                <form>
+                    <input class="data_windows_anketa" name="name" id="name" type="text" placeholder="Работа"  onchange='perenosWork(this.value)'> 
+                </form>
+            </div>
+            <div class="right">
+                <p class="in_the_future_text">Так будет выглядеть твоя будущая страница</p>
+                <div class="future_anketa_big">
+                    <div class="place_for_photo_and_batton_show_contacts">
+                        <div class="place_for_photo"></div>
+                        <form>
+                            <button class="show_contacts" onclick="contacts()" type=button>Показать контакты</button>
+                            <p id="telegram">{{ person.telegram }}</p>
+                            <p id="number">{{ person.number }}</p>
+                        </form>
+                    </div>
+                    <div  class="future_anketa_right">
+                        <p class="name_surname_in_future_anketa">{{ person.name }}</p>
+                        <div class="gender_age_grey_block_in_future_anketa">
+                            <p>{{ person.gender }}</p>
+                            <p>{{ person.age }}</p>
+                            <div class="education">
+                                <p class="ed" id="education1"></p>
+                                <p class="ed" id="education2"></p>
+                                <p class="ed" id="education3"></p>
+                                <p class="ed" id="education4"></p>
+                            </div>
+                            <p class="small_grey_block_in_future"></p>
+                        </div>
+                        <p class="medium_grey_block_in_future" id="work"></p>
+                        <div class="turn_about_myself_in_future">
+                            <p class="about_myself_in_future">О себе</p>
+                            <button class="turn">Развернуть</button>
+                        </div>
+                        <p class="big_grey_block_in_future">
+                        <!-- тут нужно прописать маленькие серые прямоугольники внутри большого -->
+                        </p>
+                    </div>
+                </div>
+                <div class="we_dont_know">
+                    <div>
+                      <p><b>Расскажи, где ты учишься</b></p> 
+                      <p class="tell_about_yourself">Часто студенты ищут соседей по схожим интересам</p> 
+                    </div>
+                    <div>
+                        <img class="happy_smile" src="{% static 'img/)smile.jpg' %}" alt="happy _smile">
+                    </div>
+                </div>  
+                <div class="continue_button_with_location">
+                    <div class="for_continue_button"></div>
+                    <button class="continue_button">Продолжить</button>
+                </div>
+            </div>
+        </div>
+        <script src="{% static './js/script2.js' %}"></script>
+    </main>
+    <footer class="footer">
+        <div class="email_and_support">
+            <p class="email">Support@homeet.com</p>
+            <p class="support">Техническая поддержка</p>
+        </div>
+        <div class="services_and_networks">
+            <div class="services">
+                <p>О сервисе</p>
+                <p>Контакты</p>
+                <p>Политика конфиденциальности</p>
+            </div>
+            <div class="networks">
+                <img class="networks_pict" src="{% static 'img/tg.jpg' %}" alt="telegram">
+                <img class="networks_pict" src="{% static 'img/vk.jpg' %}" alt="vk">
+            </div>
+        </div> 
+        <div class="down">
+            <hr>
+            <div class="down_text">
+                <p>Предложение не является публичной офертой. <br> Сервис не несет ответственность за действия пользователей, достоверность информации и т.д.</p>
+                <p>Сделано в <b>бвср</b></p>
+            </div>  
+        </div>
+    </footer>
+</body>
+</html>
