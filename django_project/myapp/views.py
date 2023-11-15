@@ -24,7 +24,7 @@ def index(request):
 
 def index2(request):
     global name_tek
-    person = Person.objects.get(name=name_tek)
+    person = User.objects.get(name=name_tek)
 
     if request.method == "POST":
         data = request.POST
