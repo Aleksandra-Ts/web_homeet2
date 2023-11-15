@@ -36,43 +36,44 @@
         <div class="line_in_cr_and_about_myself">
        </div>
         <div class="left_and_right_panels">
-            <div class="anketa">
+            <form class="anketa" id="formElem" method="post">
                 <div class="dowload_form">
                     <p class="avatar"><b>Аватар профиля</b></p>
-                    <form>
+                    <div>
                         <label class="violet_button" for="photo">Загрузить</label>
                         <input name="photo" id="photo" type="file" style="display:none;" accept=".jpg, .jpeg, .png" onchange="perenosFoto()">
-                    </form>
+                    </div>
                     <p class="text_dowload_grey">Загрузите фотографию весом не более 10 мб</p>
                 </div>
-                <form>
+                <div>
                     <input class="data_windows_anketa" name="name" id="name" type="text" placeholder="Имя и фамилия" onchange='perenosImeni(this.value)'>
                     <p class="error" id="name_format">Неверный формат имени</p>
-                </form>
-                <form class="variants">
+                </div>
+                <div class="variants">
                     <input type="radio" name="gender" id="m" value="male" onchange='perenosGender1(this.value)'>
                     <label for="m" class="variant">Парень</label>
                     <input type="radio" name="gender" id="f" value="female" onchange='perenosGender2(this.value)'>
                     <label for="f" class="variant">Девушка</label>
-                </form>
-                <form>
+                </div>
+                <div>
                     <input class="date" pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}" id="date" type="text" placeholder="Дата рождения" onfocus="(this.type='date')"  onchange='perenosDate(this.value)'>
-                </form>
-                <form>
+                </div>
+                <div>
                     <input class="data_windows_anketa" type="text" name="tg" id="tg" placeholder="Телеграм" onchange='perenosTG(this.value)'>
                     <p class="error" id="tg_format">Неверный формат никнейма</p>
-                </form>
-                <form>
+                </div>
+                <div>
                     <input class="data_windows_anketa" type="tel" name="tel" id="tel" placeholder="Телефон" onchange="perenosTel(this.value)">
                     <p class="error" id="tel_format">Неверный формат номера</p>
-                </form>
+                </div>
                 <div>
-                    <form>
+                    <div>
                         <textarea class="about_myself_block" name="textarea" id="textarea" cols="15" rows="5" placeholder="О себе" onchange="aboutMyself(value)"></textarea>
-                    </form>
+                    </div>
                     <p class="example">Например: Редко готовлю, но люблю ботать на кухне по ночам. Хочу завести собаку. Очень люблю читать, играть в хороры и смотреть аниме. Открыт к общению и взаимопомощи :)</p>
                 </div> 
-            </div> 
+                <input type="submit" value="Продолжить">
+            </form> 
             <div class="right">
                 <p class="in_the_future_text">Так будет выглядеть твоя будущая страница</p>
                 <div class="future_anketa_big">
