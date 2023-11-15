@@ -37,6 +37,7 @@
        </div>
         <div class="left_and_right_panels">
             <form class="left">
+                {% csrf_token %}
                 <div class="student_or_worker">
                     <input type="radio" id="student" name="work" value="student">
                     <label for="student" class="variant"> Студент/выпускник  </label>
